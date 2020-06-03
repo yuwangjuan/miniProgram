@@ -1,0 +1,191 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="container-body">
+ <van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+   shape="round"
+/>
+<!-- swiper -->
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <!-- <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block> -->
+        <block >
+          <swiper-item>
+            <image  src="../../images/02.jpg" style="width:100%"/>
+          </swiper-item>
+        </block>
+        <block>
+          <swiper-item>
+            <image  src="../../images/aaa.jpg"  style="width:100%"/> 
+          </swiper-item>
+        </block>
+        <block>
+          <swiper-item>
+            <image  src="../../images/bg09.jpg"  style="width:100%"/> 
+          </swiper-item>
+        </block>
+          <block>
+          <swiper-item>
+            <image  src="../../images/love.jpg"  style="width:100%"/> 
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+<!-- swiper end -->
+<view class="notice-box">
+   <van-notice-bar
+  left-icon="volume-o"
+  text="新店开张，上新多种图书，欢饮围观，咚咚咚咚咚咚咚咚咚咚咚咚"
+  backgroundColor="#fff"
+>
+</van-notice-bar>
+</view>
+ <!-- 通告结束 -->
+<van-row>
+  <van-col class="add-col" span="8">
+  <image style="width:30%;height:32px;" src="../../images/ds.png"/>
+  </van-col>
+  <van-col class="add-col" span="8">
+  <image style="width:30%;height:32px;" src="../../images/hz.png"/>
+  </van-col>
+  <van-col class="add-col" span="8">
+  <image style="width:30%;height:32px;" src="../../images/mz.png"/>
+  </van-col>
+</van-row>
+<van-row>
+  <van-col class="add-col" span="8">
+ 都市小说
+  </van-col>
+  <van-col class="add-col" span="8">
+ 文学名著
+  </van-col>
+  <van-col class="add-col" span="8">
+言情小说
+  </van-col>
+</van-row>
+<view style="margin-top:15px"></view>
+<van-row >
+  <van-col class="add-col" span="8">
+  <image style="width:30%;height:32px;" src="../../images/mz.png"/>
+  </van-col>
+  <van-col class="add-col" span="8">
+  <image style="width:30%;height:32px;" src="../../images/yq.png"/>
+  </van-col>
+  <van-col class="add-col" span="8">
+  <image style="width:30%;height:32px;" src="../../images/zy.png"/>
+  </van-col>
+</van-row>
+<van-row >
+  <van-col class="add-col" span="8">
+ 武侠小说
+  </van-col>
+  <van-col class="add-col" span="8">
+ 文学名著
+  </van-col>
+  <van-col class="add-col" span="8">
+随便看看
+  </van-col>
+</van-row>
+<!-- 书籍分类结束 -->
+<view>
+<view class="order">
+        <text class="line"></text>
+        <text class="txt">爆品推荐</text>
+        <text class="line"></text>
+    </view>
+    <van-card
+  num="2"
+  price="2.00"
+  origin-price="10.00"
+  desc="有史以来对美国影响最大的书籍"
+  title="定位"
+  tag="hot"
+  thumb="../../images/book1.jpg"
+/>
+<van-card
+  num="5"
+  price="29.00"
+  origin-price="49.99"
+  desc="对青春岁月的追忆和纪念"
+  title="那些年"
+  tag="hot"
+  thumb="../../images/book2.jpg"
+/>
+<van-card
+  num="5"
+  price="39.00"
+  origin-price="69.99"
+  desc="The Marrowbone marble"
+  title="MARBLE"
+  tag="hot"
+  thumb="../../images/book3.jpg"
+/>
+<view class="order">
+        <text class="line"></text>
+        <text class="txt">热销推荐</text>
+        <text class="line"></text>
+    </view>
+    <van-card
+  num="5"
+  price="39.00"
+  origin-price="69.99"
+  desc="对生活的态度"
+  title="还行"
+  tag="热"
+  centered="true"
+  lazy-load="true"
+  thumb="../../images/book4.jpg"
+/>
+</view>
+<!-- 限时秒杀goods -->
+<view>
+<view class="order">
+        <text class="line"></text>
+        <text class="txt">限时秒杀</text>
+        <text class="line"></text>
+    </view>
+    <van-card
+  
+  price="9.9"
+  origin-price="10.00"
+  desc="有史以来对美国影响最大的书籍,本书阐述了“定位”观念的产生，剖析了“满足需求”无法赢得用户的原因"
+  tag="hot"
+  thumb="../../images/book1.jpg"
+>
+<view slot="price-top">
+  <view class="footer-timeout"><text>剩余：{{countDownDay}}天\t{{countDownHour}}\t时\t{{countDownMinute}}\t分\t{{countDownSecond}}\t秒</text></view>
+</view>
+<view slot="footer">
+    <van-button type="danger" size="small">立即抢购</van-button>
+</view>
+</van-card>
+<van-card
+  
+  price="9.9"
+  origin-price="10.00"
+  desc="有史以来对美国影响最大的书籍,本书阐述了“定位”观念的产生，剖析了“满足需求”无法赢得用户的原因"
+  tag="hot"
+  thumb="../../images/book1.jpg"
+>
+<view slot="price-top">
+  <view class="footer-timeout"><text>剩余：{{countDownDay}}天\t{{countDownHour}}\t时\t{{countDownMinute}}\t分\t{{countDownSecond}}\t秒</text></view>
+</view>
+<view slot="footer">
+    <van-button type="danger" size="small" bind:click="buyNow">立即抢购</van-button>
+</view>
+</van-card>
+<view class="order">
+        <text class="line"></text>
+        <text class="txt">没有更多了</text>
+        <text class="line"></text>
+    </view>
+</view>
+</view>
+</view>
+

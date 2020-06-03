@@ -1,0 +1,42 @@
+<!--pages/bookDetails/bookDetails.wxml-->
+<view>
+<text class="goods-title">商品详情</text>
+<!-- swiper -->
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block >
+          <swiper-item>
+            <image  src="../../images/02.jpg" style="width:100%"/>
+          </swiper-item>
+        </block>
+        <block>
+          <swiper-item>
+            <image  src="../../images/aaa.jpg"  style="width:100%"/> 
+          </swiper-item>
+        </block>
+        <block>
+          <swiper-item>
+            <image  src="../../images/bg09.jpg"  style="width:100%"/> 
+          </swiper-item>
+        </block>
+          <block>
+          <swiper-item>
+            <image  src="../../images/love.jpg"  style="width:100%"/> 
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+<!-- swiper end -->
+<view class="detail-title">本书阐述了定位观念的产生，剖析了满足需求无法赢得</view>
+<view class="detail-share">分享有赏，好友下单后，再得5元现金奖励</view>
+<view class="detail-money">￥236 <text>6人已买</text></view>
+<view  style="height:100%; width:90%;border:1px solid #afa">商品详情介绍</view>
+<view class="detail-btm">
+<van-icon class="btn-icon"  name="service-o" size="35px"></van-icon>
+<van-icon  class="btn-icon" name="shopping-cart-o" size="35px"></van-icon>
+<van-icon class="btn-icon" name="star-o" size="35px"></van-icon>
+<van-button class="btn-cart" type="warning" bind:click="getInfo">加入购物车</van-button>
+<van-button class="btn-cart" type="danger" >立即购买</van-button>
+</view>
+</view>

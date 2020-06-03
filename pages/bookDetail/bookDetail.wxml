@@ -1,0 +1,4 @@
+<!--pages/bookDetail/bookDetail.wxml-->
+<text>{{book.title}}</text>
+<van-button type="danger" data-id="{{id}}" plain size="mini" bind:click="update">更新</van-button>
+<van-button type="warning" data-id="{{id}}" plain size="mini" bind:click="delete">删除</van-button>
